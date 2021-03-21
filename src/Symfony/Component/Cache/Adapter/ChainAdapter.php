@@ -33,11 +33,11 @@ class ChainAdapter implements AdapterInterface, CacheInterface, PruneableInterfa
 {
     use ContractsTrait;
 
-    private $adapters = [];
-    private $adapterCount;
-    private $defaultLifetime;
+    protected $adapters = [];
+    protected $adapterCount;
+    protected $defaultLifetime;
 
-    private static $syncItem;
+    protected static $syncItem;
 
     /**
      * @param CacheItemPoolInterface[] $adapters        The ordered list of adapters used to fetch cached items
